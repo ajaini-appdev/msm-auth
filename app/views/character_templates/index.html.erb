@@ -10,13 +10,6 @@
 
 <table class="table">
   <tr>
-    <th>
-      ID
-    </th>
-
-    <th>
-      Name
-    </th>
 
     <th>
       Movie
@@ -25,6 +18,10 @@
     <th>
       Actor
     </th>
+    
+    <th>
+      Name
+    </th>
 
     <th>
     </th>
@@ -32,13 +29,6 @@
 
   <% @characters.each do |character| %>
   <tr>
-    <td>
-      <%= character.id %>
-    </td>
-
-    <td>
-      <%= character.name %>
-    </td>
 
     <td>
       <%= link_to character.movie.title, "/movies/#{character.movie_id}" %>
@@ -46,6 +36,10 @@
 
     <td>
       <%= link_to character.actor.name, "/actors/#{character.actor_id}" %>
+    </td>
+    
+    <td>
+      <%= character.name %>
     </td>
 
     <td>

@@ -1,6 +1,21 @@
 <h1>
-  Movie #<%= @movie.id %> details
+  <%= @movie.title %>
 </h1>
+
+<form action="/create_bookmark" method="post">
+  <!--input hidden for user ID-->
+  <input type="hidden" name="movie_id" value="<%=@movie.id%>">
+
+  <!--input hidden for user ID-->
+  <input type="hidden" name="user_id" value="<%=current_user.id%>">
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create bookmark
+  </button>
+</form>
+
+
+
 
 <a href="/movies/<%= @movie.id %>/edit">
   Edit movie
